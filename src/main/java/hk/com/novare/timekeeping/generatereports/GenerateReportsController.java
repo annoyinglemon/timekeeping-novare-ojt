@@ -1,4 +1,4 @@
-package hk.com.novare.generatereports;
+package my.groupid.about;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package hk.com.novare.timekeeping.account;
+package my.groupid.account;
 
 import javax.persistence.*;
 

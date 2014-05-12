@@ -1,4 +1,4 @@
-package hk.com.novare.timekeeping.config;
+package my.groupid.config;
 
 import java.util.Properties;
 
@@ -16,7 +16,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
-import hk.com.novare.timekeeping.Application;
+import my.groupid.Application;
 
 @Configuration
 @EnableTransactionManagement

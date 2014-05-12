@@ -14,11 +14,33 @@
 <body>
 
 <div th:replace="fragments/header :: header">Header</div>
-    <div class="panel panel-info">
-      <div class="panel-heading">
-          <h3 class="panel-title">Create User</h3>
-      </div>
-      <div class="panel-body">Panel content
+    <div class="container">
+      <div class="well">
+        <div class="input-group">
+        <table class="table">
+          <tr>
+            <th><input type="text" class="form-control" placeholder="First Name" /></th>
+            <th><input type="text" class="form-control" placeholder="Last Name" /></th>
+            <th><input type="text" class="form-control" placeholder="Middle Name" /></th>
+          </tr>
+          <tr>
+            <th><input type="text" class="form-control" placeholder="Position" /></th>
+            <th><input type="text" class="form-control" placeholder="Supervisor" /></th>
+          </tr>
+          <tr>
+            <th><input type="text" class="form-control" placeholder="Date Hired" /></th>
+            <th><input type="text" class="form-control" placeholder="Level" /></th>
+          </tr>
+          <tr>
+            <th><input type="text" class="form-control" placeholder="SSS" /></th>
+            <th><input type="text" class="form-control" placeholder="TIN" /></th>
+          </tr>
+          <tr>
+            <th><input type="text" class="form-control" placeholder="PAGIBIG" /></th>
+            <th><input type="text" class="form-control" placeholder="Healthcard" /></th>
+          </tr>
+      </table>
+        </div>
       </div>
     </div>
 

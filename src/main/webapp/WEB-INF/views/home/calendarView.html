@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div th:fragment="calendarView">
+<div align = "center">
+			<span id = "month">Month</span><span id = "year">Year</span>
+</div>
+		<div align = "center">
+	<select  id = "monthlist" onchange="updateCalendarView()">
+		<option value="0">January</option>
+		<option value="1">February</option>
+		<option value="2">March</option>
+		<option value="3">April</option>
+		<option value="4">May</option>
+		<option value="5">June</option>
+		<option value="6">July</option>
+		<option value="7">August</option>
+		<option value="8">September</option>
+		<option value="9">October</option>
+		<option value="10">November</option>
+		<option value="11">December</option>
+	</select>
+	<select id = "yearlist" onchange="updateCalendarView()">
+		<option value="2014">2014</option>
+		<option value="2013">2013</option>
+		<option value="2012">2012</option>
+		<option value="2011">2011</option>
+		<option value="2010">2010</option>
+		<option value="2009">2009</option>
+		<option value="2008">2008</option>
+		<option value="2007">2007</option>
+		<option value="2006">2006</option>
+	</select>
+ </div>
+	<div id = "table">
+	<table class = "table table-bordered" align = "center" id = "calendartable">
+		<tr class = "text-center">
+			<th class = "text-center col-lg-1">Sunday</th>
+			<th class = "text-center col-lg-1">Monday</th>
+			<th class = "text-center col-lg-1">Tuesday</th>
+			<th class = "text-center col-lg-1">Wednesday</th>
+			<th class = "text-center col-lg-1">Thursday</th>
+			<th class = "text-center col-lg-1">Friday</th>
+			<th class = "text-center col-lg-1">Saturday</th>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		
+	</table>
+ </div>
+
+<script type= "text/javascript">
+//<![CDATA[
+	clearTable();
+	getCurrentDate();
+	
+	function fillVoidSpaces() {
+		return '<div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>';
+	}
+	
+	function fillTimestamp() {
+		return '<div>Time In: </div><div>Time Out: </div>';
+	}
+	
+	function setDate() {
+		var yearlist = document.getElementById("yearlist");
+		var newYear = yearlist.options[yearlist.selectedIndex].value;
+		var month = document.getElementById("monthlist");
+		var newMonth =  monthlist.options[monthlist.selectedIndex].value;
+	}
+	function clearTable() {
+		var table = document.getElementById('calendartable');
+		var date = new Date();
+		var num = 1;
+		for (row = 1; row <=6; row++){
+			for (cell = 0; cell <7; cell++) {
+			table.rows[row].cells[cell].innerHTML = fillVoidSpaces();
+				num++;
+				}
+		}
+		num = 1;
+	}
+	
+	function getCurrentDate() {
+		var table = document.getElementById('calendartable');
+		<!--Arrays-->
+		var Months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+		var monthDays = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+		<!--Variables-->
+		var date = new Date();
+		var month = date.getMonth();
+		var month_string = Months[month];
+		var year = date.getFullYear();
+		var firstDay = new Date(year, month, 1).getDay();
+		document.getElementById('month').innerHTML = month_string;
+		document.getElementById('year').innerHTML = year;
+		var block_counter = 1;
+		var day_counter = 1;
+		var week_counter = 0;
+		
+		for (row = 1; row <=6; row++){
+			for (cell = 0; cell <7; cell++) {
+				if ((block_counter) <= firstDay) {
+					table.rows[row].cells[cell].innerHTML = '';
+
+					block_counter++;
+				}
+				else {
+					if (day_counter<=monthDays[month]) {
+					table.rows[row].cells[cell].innerHTML = day_counter + fillTimestamp();
+					day_counter++;
+					}
+				}
+			}
+		}
+	}
+	
+	function updateCalendarView() {
+		var yearlist = document.getElementById("yearlist");
+		var newYear = yearlist.options[yearlist.selectedIndex].value;
+		var month = document.getElementById("monthlist");
+		var newMonth =  monthlist.options[monthlist.selectedIndex].value;
+		
+		var table = document.getElementById('calendartable');
+		<!--Arrays-->
+		var Months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+		var monthDays = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+		<!--Variables-->
+		var date = new Date(newYear, newMonth, 1);
+		var month = date.getMonth();
+		var month_string = Months[month];
+		var year = date.getFullYear();
+		var firstDay = new Date(year, month, 1).getDay();
+		document.getElementById('month').innerHTML = month_string;
+		document.getElementById('year').innerHTML = year;
+		var block_counter = 1;
+		var day_counter = 1;
+		var week_counter = 0;
+		for (row = 1; row <=6; row++){
+			for (cell = 0; cell <7; cell++) {
+				if ((block_counter) <= firstDay) {
+					table.rows[row].cells[cell].innerHTML = '';
+					block_counter++;
+				}
+				else {
+					if (day_counter<=monthDays[month]) {
+					table.rows[row].cells[cell].innerHTML = day_counter + fillTimestamp();
+					day_counter++;
+					}
+					else{
+					table.rows[row].cells[cell].innerHTML = fillVoidSpaces();
+					}
+				}
+			}
+		}
+	}
+//]]>
+ </script>
+ </div>
+</body>
+</html>

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import hk.com.novare.timekeeping.account.*;
-import hk.com.novare.timekeeping.web.*;
+import hk.com.novare.support.web.*;
 
 @Controller
 public class SignupController {

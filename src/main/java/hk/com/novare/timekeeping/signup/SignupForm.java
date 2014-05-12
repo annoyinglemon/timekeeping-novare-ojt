@@ -1,8 +1,8 @@
-package hk.com.novare.timekeeping.signup;
+package my.groupid.signup;
 
 import org.hibernate.validator.constraints.*;
 
-import hk.com.novare.timekeeping.account.Account;
+import my.groupid.account.Account;
 
 public class SignupForm {
 

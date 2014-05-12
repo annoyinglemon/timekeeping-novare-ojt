@@ -1,4 +1,4 @@
-package hk.com.novare.timekeeping.config;
+package my.groupid.config;
 
 import java.net.UnknownHostException;
 

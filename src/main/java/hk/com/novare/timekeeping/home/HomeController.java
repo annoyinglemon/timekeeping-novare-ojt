@@ -1,4 +1,4 @@
-package hk.com.novare.timekeeping.home;
+package my.groupid.home;
 
 import java.security.Principal;
 

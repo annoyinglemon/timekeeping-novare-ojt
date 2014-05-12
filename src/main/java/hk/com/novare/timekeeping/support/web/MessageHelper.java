@@ -1,6 +1,6 @@
-package hk.com.novare.timekeeping.support.web;
+package my.groupid.support.web;
 
-import static hk.com.novare.timekeeping.support.web.Message.MESSAGE_ATTRIBUTE;
+import static my.groupid.support.web.Message.MESSAGE_ATTRIBUTE;
 
 import org.springframework.ui.Model;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;

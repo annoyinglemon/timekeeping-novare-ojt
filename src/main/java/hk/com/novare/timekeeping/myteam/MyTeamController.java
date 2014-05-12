@@ -1,4 +1,4 @@
-package hk.com.novare.timekeeping.myteam;
+package my.groupid.about;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

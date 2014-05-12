@@ -1,3 +1,3 @@
-package hk.com.novare.timekeeping;
+package my.groupid;
 
 public interface Application {}

@@ -1,4 +1,4 @@
-package hk.com.novare.timekeeping.error;
+package my.groupid.error;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.context.request.WebRequest;

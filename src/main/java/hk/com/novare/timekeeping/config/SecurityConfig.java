@@ -1,11 +1,11 @@
-package hk.com.novare.timekeeping.config;
+package my.groupid.config;
 
 import org.springframework.context.annotation.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.security.web.authentication.rememberme.TokenBasedRememberMeServices;
 
-import hk.com.novare.timekeeping.account.UserService;
+import my.groupid.account.UserService;
 
 @Configuration
 @ImportResource(value = "classpath:spring-security-context.xml")

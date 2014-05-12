@@ -12,21 +12,40 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Demo project</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#" th:href="@{/}">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li th:if="${#authorization.expression('!isAuthenticated()')}">
-                    <a href="/signin" th:href="@{/signin}">Sign in</a>
+                <li th:if="${#authorization.expression('isAuthenticated()')}">
+                <a href="/signin" th:href="@{}">Home</a>
+                <li th:if="${#authorization.expression('isAuthenticated()')}">
+                <a href="/signin" th:href="@{/signin}">Home</a>
                 </li>
                 <li th:if="${#authorization.expression('isAuthenticated()')}">
-                    <a href="/logout" th:href="@{#}" onclick="$('#form').submit();">Logout</a>
-                    <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>
+                <a href="/myteam" th:href="@{/myteam}">My Team</a>
+                </li>
+                <li th:if="${#authorization.expression('isAuthenticated()')}">
+                <a href="/createuser" th:href="@{/createuser}">Create User</a>
+                </li>
+                 <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Generate Reports <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/generatereports" th:href="@{/generatereports}">Overtime Report</a></li>
+                <li><a href="/generatereports" th:href="@{/generatereports}">Late Report</a></li>
+                <li><a href="/generatereports" th:href="@{/generatereports}">Leave without pay</a></li>
+              </ul>
+            </li> 
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <li class="search-block" >
+                  <a th:href="@{/generatereports}"><input type="text" id="searchUsername" name="searchUsername" placeholder="username"/>
+                    <button id="searchButton" name="searchButton" onclick="testAjax()" type="button">Search</button></a>
+                </li>
+                <li class ="dropdown">
+                    <a  th:text="${#authentication.name}"  href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white"> *insert username* </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Sign in as Admin</a></li>
+                    <li><a href="#">Sign in as Manager</a></li>
+                </ul>
                 </li>
             </ul>
         </div>

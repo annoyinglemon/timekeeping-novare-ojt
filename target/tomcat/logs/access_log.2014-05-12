@@ -46,3 +46,14 @@
 0:0:0:0:0:0:0:1 - - [12/May/2014:14:50:26 +0800] "POST /timekeeping-novare-ojt/j_spring_security_check HTTP/1.1" 302 - http-bio-8080-exec-7 30
 0:0:0:0:0:0:0:1 - - [12/May/2014:14:50:26 +0800] "GET /timekeeping-novare-ojt/ HTTP/1.1" 200 6866 http-bio-8080-exec-8 35
 0:0:0:0:0:0:0:1 - - [12/May/2014:14:50:26 +0800] "GET /timekeeping-novare-ojt/resources/js/bootstrap.min.js HTTP/1.1" 304 - http-bio-8080-exec-9 12
+0:0:0:0:0:0:0:1 - - [12/May/2014:14:59:11 +0800] "GET /timekeeping-novare-ojt HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [12/May/2014:14:59:12 +0800] "GET /timekeeping-novare-ojt/ HTTP/1.1" 302 - http-bio-8080-exec-3 99
+0:0:0:0:0:0:0:1 - - [12/May/2014:14:59:13 +0800] "GET /timekeeping-novare-ojt/signin HTTP/1.1" 200 1547 http-bio-8080-exec-4 573
+0:0:0:0:0:0:0:1 - - [12/May/2014:14:59:13 +0800] "GET /timekeeping-novare-ojt/resources/css/core.css HTTP/1.1" 200 586 http-bio-8080-exec-6 15
+0:0:0:0:0:0:0:1 - - [12/May/2014:14:59:13 +0800] "GET /timekeeping-novare-ojt/resources/css/bootstrap.min.css HTTP/1.1" 200 97347 http-bio-8080-exec-5 140
+0:0:0:0:0:0:0:1 - - [12/May/2014:14:59:20 +0800] "POST /timekeeping-novare-ojt/j_spring_security_check HTTP/1.1" 302 - http-bio-8080-exec-8 201
+0:0:0:0:0:0:0:1 - - [12/May/2014:14:59:20 +0800] "GET /timekeeping-novare-ojt/ HTTP/1.1" 200 6866 http-bio-8080-exec-9 271
+0:0:0:0:0:0:0:1 - - [12/May/2014:14:59:20 +0800] "GET /timekeeping-novare-ojt/resources/js/bootstrap.min.js HTTP/1.1" 200 27731 http-bio-8080-exec-10 38
+0:0:0:0:0:0:0:1 - - [12/May/2014:14:59:27 +0800] "GET /timekeeping-novare-ojt/createuser HTTP/1.1" 200 4250 http-bio-8080-exec-10 80
+0:0:0:0:0:0:0:1 - - [12/May/2014:14:59:30 +0800] "GET /timekeeping-novare-ojt/myteam HTTP/1.1" 200 3218 http-bio-8080-exec-1 46
+0:0:0:0:0:0:0:1 - - [12/May/2014:14:59:32 +0800] "GET /timekeeping-novare-ojt/signin HTTP/1.1" 200 1547 http-bio-8080-exec-3 9

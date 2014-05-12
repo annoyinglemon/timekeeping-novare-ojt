@@ -1,4 +1,4 @@
-package my.groupid.config;
+package hk.com.novare.config;
 
 import java.net.UnknownHostException;
 

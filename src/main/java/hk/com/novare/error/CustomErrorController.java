@@ -1,4 +1,4 @@
-package hk.com.novare.error;
+package my.groupid.error;
 
 import java.text.MessageFormat;
 

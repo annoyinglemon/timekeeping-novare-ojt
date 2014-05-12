@@ -1,4 +1,4 @@
-package hk.com.novare.config;
+package my.groupid.config;
 
 import java.util.Properties;
 
@@ -16,7 +16,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
-import hk.com.novare.Application;
+import my.groupid.Application;
 
 @Configuration
 @EnableTransactionManagement
@@ -50,7 +50,7 @@ class JpaConfig implements TransactionManagementConfigurer {
     public LocalContainerEntityManagerFactoryBean configureEntityManagerFactory() {
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(configureDataSource());
-        entityManagerFactoryBean.setPackagesToScan("hk.com.novare");
+        entityManagerFactoryBean.setPackagesToScan("my.groupid");
         entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 
         Properties jpaProperties = new Properties();

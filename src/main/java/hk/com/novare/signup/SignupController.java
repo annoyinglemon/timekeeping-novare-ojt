@@ -1,4 +1,4 @@
-package hk.com.novare.signup;
+package my.groupid.signup;
 
 import javax.validation.Valid;
 
@@ -9,8 +9,8 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import hk.com.novare.account.*;
-import hk.com.novare.support.web.*;
+import my.groupid.account.*;
+import my.groupid.support.web.*;
 
 @Controller
 public class SignupController {
@@ -37,7 +37,8 @@ public class SignupController {
 		Account account = accountRepository.save(signupForm.createAccount());
 		userService.signin(account);
         // see /WEB-INF/i18n/messages.properties and /WEB-INF/views/homeSignedIn.html
-        MessageHelper.addSuccessAttribute(ra, "signup.success");
+		
+        MessageHelper.addSuccessAttribute(ra,"signup.success");
 		return "redirect:/";
 	}
 }

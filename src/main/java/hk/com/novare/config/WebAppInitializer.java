@@ -1,4 +1,4 @@
-package hk.com.novare.config;
+package my.groupid.config;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.DelegatingFilterProxy;

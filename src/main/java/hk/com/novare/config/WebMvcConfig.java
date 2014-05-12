@@ -1,4 +1,4 @@
-package hk.com.novare.config;
+package my.groupid.config;
 
 import static org.springframework.context.annotation.ComponentScan.Filter;
 
@@ -21,7 +21,7 @@ import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 import org.thymeleaf.templateresolver.TemplateResolver;
 
-import hk.com.novare.Application;
+import my.groupid.Application;
 
 @Configuration
 @ComponentScan(basePackageClasses = Application.class, includeFilters = @Filter(Controller.class), useDefaultFilters = false)

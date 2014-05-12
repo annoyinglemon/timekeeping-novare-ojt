@@ -1,4 +1,4 @@
-package hk.com.novare.config;
+package my.groupid.config;
 
 import java.net.UnknownHostException;
 
@@ -20,7 +20,7 @@ class MongoConfig {
 
     @Bean
     public MongoDbFactory mongoDbFactory() throws UnknownHostException {
-        return new SimpleMongoDbFactory(new Mongo(), "timekeeping-novare-ojt");
+        return new SimpleMongoDbFactory(new Mongo(), "my-artifactId");
     }
 
     @Bean
